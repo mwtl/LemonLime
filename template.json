@@ -1,0 +1,1 @@
+{"placeholders":{"price":{"type":"text"},"product_title":{"type":"text"},"product_image":{"type":"image"},"logo":{"type":"image"},"background":{"type":"image"},"cta_text":{"type":"text"},"landingspage_url":{"type":"click"},"cta_backgroundcolor":{"type":"text"}}}

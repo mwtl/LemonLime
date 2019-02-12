@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="ad.size" content="width=300,height=600">
+        <meta name="generator" content="LemonPI Studio 1.47.0">
+
+        <title>Lemon Lime Creative</title>
+
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+
+        <!-- External stylesheets -->
+        <link rel="stylesheet" type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Source Sans Pro:600.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="./style.css" />
+    </head>
+    <body>
+        <!-- Creative's content -->
+        <div id="content">
+            <div id="creative_container" style="width: 300px; height: 600px; position: relative; overflow: hidden;">
+                <div id="background" class="background" data-placeholder="background" >
+                </div>
+                <div id="logo" class="logo logo" data-placeholder="logo" >
+                </div>
+                <div id="product" class="product" >
+                  <div id="product_image" class="product_image" data-placeholder="product_image" >
+                  </div>
+                  <div id="product_title" class="product_title" data-placeholder="product_title" ></div>
+                  <div id="price" class="price" data-placeholder="price" ></div>
+                </div>
+                <div class="cta" data-placeholder="landingspage_url" id="cta">
+                    <div class="cta_background" id="cta_background" ></div>
+                    <div class="cta_text" data-placeholder="cta_text" id="cta_text">KOPEN</div>
+                </div>
+                <div id="fallback" class="fallback" data-fallback style="display: none;">
+                  <div id="fallback_background" class="fallback_background" data-fallback data-fallback-image="20.png" style="display: none;">
+                  </div>
+                  <div id="fallback_text" class="fallback_text" data-fallback style="display: none;">Fallback layer</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://creative-libraries.lemonpi.io/v1/lemonpi.js"></script>
+
+        <!-- Dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+        <!-- Creative's script -->
+        <script src="script.js"></script>
+    </body>
+</html>
