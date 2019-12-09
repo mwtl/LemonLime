@@ -1,0 +1,99 @@
+{
+	"data": {
+		"rules": [{
+			"assignments": [{
+				"name": "cta_text",
+				"expr": "MORE LEMONS"
+			}, {
+				"name": "landingspage_url",
+				"expr": "https://www.lemonpi.io"
+			}, {
+				"name": "background",
+				"expr": "http://www.lemonpi.io/wp-content/uploads/2017/01/lemonpi_white_horizontal.png"
+			}, {
+				"name": "logo",
+				"expr": "http://www.lemonpi.io/wp-content/uploads/2017/01/lemonpi_white_horizontal.png"
+			}, {
+				"name": "cta_backgroundcolor",
+				"expr": "#dabe00"
+			},{
+				"name": "slides",
+				"expr": [
+					[{"name":"product_title","expr":"title1"},{"name":"product_image","expr":"http://www.lemonpi.io/wp-content/uploads/2017/01/lemonpi_white_horizontal.png"},{"name":"product_price","expr":"€ 1.00"}],
+					[{"name":"product_title","expr":"title2"},{"name":"product_image","expr":"http://www.lemonpi.io/wp-content/uploads/2017/01/lemonpi_white_horizontal.png"},{"name":"product_price","expr":"€ 2.00"}],
+					[{"name":"product_title","expr":"title3"},{"name":"product_image","expr":"http://www.lemonpi.io/wp-content/uploads/2017/01/lemonpi_white_horizontal.png"},{"name":"product_price","expr":"€ 3.00"}]
+			]},{
+				"name": "used_context",
+				"expr": "{}"
+			}],
+			"predicate": true
+		}, {
+			"predicate": ["=", "${device.os}", "Android"],
+			"assignments": [{
+				"name": "cta_text",
+				"expr": "MORE LEMONS FOR ANDROID"
+			}]
+		}, {
+			"predicate": ["=", "${device.os}", "iOS"],
+			"assignments": [{
+				"name": "cta_text",
+				"expr": "MORE LEMONS FOR APPLE"
+			}]
+		}
+		, {
+			"predicate": ["=", "${device.os}", "Windows"],
+			"assignments": [{
+				"name": "cta_text",
+				"expr": "MORE LEMONS FOR Windows"
+			}]
+		}, {
+			"predicate": true,
+			"assignments": [{
+				"name": "used_context",
+				"expr": "{\"os\"=\"${device.os}\"}"
+			}]
+		}],
+		"placeholders": [{
+			"name": "cta_text",
+			"type": "text"
+		}, {
+			"name": "landingspage_url",
+			"type": "click"
+		}, {
+			"name": "background",
+			"type": "image"
+		}, {
+			"name": "logo",
+			"type": "image"
+		}, {
+			"name": "cta_backgroundcolor",
+			"type": "text"
+		}, {
+			"name": "slides",
+			"type": "collection",
+			"placeholders": [{
+				"name": "product_title",
+				"type": "text"
+				},{
+				"name": "product_image",
+				"type": "image"
+				},
+				{
+				"name": "product_price",
+				"type": "text"
+				}
+			]
+		},
+		{
+		"name":"used_context",
+		"type":"text"
+		}],
+		"context": [{
+			"alias": "device",
+			"schema": "urn:lemonpi:schema:context:device:v1"
+		}]
+	},
+	"meta": {
+		"schema": "urn:lemonpi:schema:content-function:rules:v1"
+	}
+}
